@@ -14,7 +14,7 @@ function TotalProgram(props) {
       <div className="total-program-section w-50 d-flex flex-column text-center">
         <span
           style={{
-            fontFamily: "Pathway Gothic One",
+            fontFamily: "open sans",
             fontSize: 20,
           }}
         >
@@ -22,8 +22,8 @@ function TotalProgram(props) {
         </span>
         <span
           style={{
-            fontFamily: "Pathway Gothic One",
-            color: "#00a441",
+            fontFamily: "open sans",
+            color: "#006641",
             fontWeight: "bolder",
             fontSize: 28,
           }}
@@ -34,7 +34,7 @@ function TotalProgram(props) {
       <div className="dana-terkumpul-section w-50 d-flex flex-column text-center">
         <span
           style={{
-            fontFamily: "Pathway Gothic One",
+            fontFamily: "open sans",
             fontSize: 20,
           }}
         >
@@ -42,8 +42,8 @@ function TotalProgram(props) {
         </span>
         <span
           style={{
-            fontFamily: "Pathway Gothic One",
-            color: "#00a441",
+            fontFamily: "open sans",
+            color: "#006641",
             fontWeight: "bolder",
             fontSize: 28,
           }}
