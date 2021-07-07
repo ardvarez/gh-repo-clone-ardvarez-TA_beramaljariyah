@@ -140,9 +140,6 @@ function Bruto() {
       borderRadius: 15,
       height: 50,
     }),
-    placeholder: (styles) => ({
-      color: "#545454"
-    }),
   };
 
   return (
@@ -153,20 +150,10 @@ function Bruto() {
       className="form-wrapper d-flex flex-column"
     >
       <div className="w-75">
-      <hr></hr>
-        <Form aria-label="">
-            <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Pendapatan Per Bulan
-            </span>
-          <Form.Row className="my-2" >
+        <Form>
+          <Form.Row className="my-2">
             {/* this number format value will be return string, to change it type, use parseInt */}
             <NumberFormat
-              aria-label="Pendapatan Per Bulan"
               prefix={"Rp. "}
               thousandSeparator={true}
               placeholder="Pendapatan Per Bulan"
@@ -183,17 +170,8 @@ function Bruto() {
               }}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Pendapatan Tambahan
-            </span>
           <Form.Row className="my-2">
             <NumberFormat
-              aria-label="Pendapatan Tambahan (jika ada)"
               prefix={"Rp. "}
               thousandSeparator={true}
               placeholder="Pendapatan Tambahan (jika ada)"
@@ -210,17 +188,8 @@ function Bruto() {
               }}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Jumlah Zakat
-            </span>
           <Form.Row className="my-2">
             <NumberFormat
-              aria-label="Jumlah Zakat"
               prefix={"Rp. "}
               thousandSeparator={true}
               placeholder="Jumlah Zakat"
@@ -237,17 +206,8 @@ function Bruto() {
               }}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Pilih Amil Zakat
-            </span>
           <Form.Row className="my-2">
             <AsyncSelect
-              aria-label="Pilih Amil Zakat"
               cacheOptions
               defaultOptions
               loadOptions={getAmilZakat}
@@ -256,17 +216,8 @@ function Bruto() {
               styles={customSelectStyles}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Pilih Metode Pembayaran
-            </span>
           <Form.Row className="my-2">
             <AsyncSelect
-              aria-label="Pilih Metode Pembayaran"
               cacheOptions
               defaultOptions
               loadOptions={getPaymentMethod}
@@ -276,17 +227,8 @@ function Bruto() {
               onChange={(e) => onChangePayment(e)}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Nama Pengguna
-            </span>
           <Form.Row className="my-2">
             <Form.Control
-              aria-label="Nama Pengguna"
               placeholder="Nama Pengguna"
               name="username"
               value={
@@ -300,17 +242,8 @@ function Bruto() {
               }
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Nomor Telepon
-            </span>
           <Form.Row className="my-2">
             <NumberFormat
-              aria-label="Nomor Telepon"
               format="####-####-####"
               mask="_"
               placeholder="Nomor Telepon"
@@ -330,7 +263,6 @@ function Bruto() {
         </Form>
       </div>
       <ToggleButton
-        aria-label="switch"
         form={form}
         setForm={setForm}
         message="Apakah anda ingin mendapatkan informasi terkini?"

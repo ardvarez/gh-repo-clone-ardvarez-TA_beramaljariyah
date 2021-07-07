@@ -5,8 +5,6 @@ import BrutoRadioButton from "../buttons/Bruto";
 import NettoRadioButton from "../buttons/Netto";
 import BrutoForm from "../Forms/Bruto";
 import NettoFrom from "../Forms/Netto";
-import PenjelasanBruto from "./PenjelasanBruto";
-import PenjelasanNetto from "./PenjelasanNetto";
 
 function ZakatPenghasilan() {
   const [brutoNetto, changeBrutoNetto] = useState({
@@ -37,12 +35,10 @@ function ZakatPenghasilan() {
         <div className="zakat-penghasilan-form">
           {brutoNetto.bruto ? (
             <AnimatePresence exitBeforeEnter>
-              <PenjelasanBruto/>
               <BrutoForm />
             </AnimatePresence>
           ) : (
             <AnimatePresence exitBeforeEnter>
-              <PenjelasanNetto/>
               <NettoFrom />
             </AnimatePresence>
           )}

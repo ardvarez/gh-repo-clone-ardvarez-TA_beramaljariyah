@@ -35,50 +35,28 @@ function MyNavbar() {
     >
       <Nav className="mr-auto align-items-center">
         <Navbar.Brand as={Link} to="/">
-          <img src={Logo} alt="Brand" height="40" />
+          <img src={Logo} alt="Brand" height="32px" />
         </Navbar.Brand>
-        <Nav.Link as={Link} to="/"
-        style={{
-          fontFamily: "open sans",
-          fontSize: "14"
-        }}>
+        <Nav.Link as={Link} to="/">
           Beranda
         </Nav.Link>
-        <Nav.Link as={Link} to="/zakat" style={{
-          fontFamily: "open sans",
-          fontSize: "14"
-        }}>
+        <Nav.Link as={Link} to="/zakat">
           Zakat
         </Nav.Link>
-        <Nav.Link as={Link} to="/infak" style={{
-          fontFamily: "open sans",
-          fontSize: "14"
-        }}>
+        <Nav.Link as={Link} to="/infak">
           Infak
         </Nav.Link>
-        <Nav.Link as={Link} to="/wakaf" style={{
-          fontFamily: "open sans",
-          fontSize: "14"
-        }}>
+        <Nav.Link as={Link} to="/wakaf">
           Wakaf
         </Nav.Link>
-        <Nav.Link as={Link} to="/pengelola" style={{
-          fontFamily: "open sans",
-          fontSize: "14"
-        }}>
+        <Nav.Link as={Link} to="/pengelola">
           Pengelola
         </Nav.Link>
-        <Nav.Link as={Link} to="/tentang" style={{
-          fontFamily: "open sans",
-          fontSize: "14"
-        }}>
+        <Nav.Link as={Link} to="/tentang">
           Tentang
         </Nav.Link>
       </Nav>
-      <Nav className="align-items-center" style={{
-          fontFamily: "open sans",
-          fontSize: "14"
-        }}>
+      <Nav className="align-items-center">
         <Search />
         {user.loginStatus ? <Logged /> : <NotLogged />}
       </Nav>

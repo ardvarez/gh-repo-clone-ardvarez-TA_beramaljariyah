@@ -34,18 +34,7 @@ function Pengelola() {
       exit={{ opacity: 0 }}
       style={{ paddingTop: 90 }}
       className="d-flex flex-column align-items-center"
-      
     >
-      <span
-              style={{
-                fontSize: 32,
-                fontWeight: "bold",
-                margin: "-10px 0 20px 0",
-                color: "#006641"
-              }}
-            >
-              Daftar Yayasan Pengelola
-            </span>
       {dataPengelola.load ? (
         <Loading />
       ) : (

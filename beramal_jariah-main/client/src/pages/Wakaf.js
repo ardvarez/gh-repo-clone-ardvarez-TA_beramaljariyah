@@ -89,16 +89,6 @@ function Wakaf() {
         <Loading />
       ) : (
         <>
-        <h1
-        style={{
-          fontSize: 36,
-          fontWeight: "bold",
-          margin: "-10px 0 20px 0",
-          color: "#006641"
-        }}
-      >
-        Daftar Program Wakaf
-      </h1>
           <MainProgramInformationHeader
             title="Wakaf"
             totalDana={wakafPrograms.totalDana}

@@ -9,13 +9,12 @@ function Netto(props) {
   return (
     <div className="d-flex align-items-center">
       <button
-        aria-label="button"
         type="button"
         className={
           props.state.netto ? "active-radio-btn" : "inactive-radio-btn"
         }
         style={{
-          border: "1px solid #006641",
+          border: "1px solid #00a441",
           height: 16,
           width: 16,
           borderRadius: "50%",
@@ -25,7 +24,6 @@ function Netto(props) {
         onClick={() => onClick()}
       ></button>
       <button
-        aria-label="button"
         type="button"
         className="radio-btn-label"
         style={{

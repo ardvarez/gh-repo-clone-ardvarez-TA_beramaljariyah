@@ -135,9 +135,6 @@ function Maal() {
       borderRadius: 15,
       height: 50,
     }),
-    placeholder: (styles) => ({
-      color: "#545454"
-    }),
   };
 
   return (
@@ -148,23 +145,13 @@ function Maal() {
       className="form-wrapper d-flex flex-column"
     >
       <div className="w-75">
-      <hr></hr>
         <Form>
-        <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Nilai Deposito atau Tabungan
-            </span>
           <Form.Row className="my-2">
             {/* this number format value will be return string, to change it type, use parseInt */}
             <NumberFormat
-              aria-label="Nilai deposito atau tabungan"
               prefix={"Rp. "}
               thousandSeparator={true}
-              placeholder="Nilai Deposito atau Tabungan"
+              placeholder="Nilai Deposito"
               name="deposito"
               customInput={Form.Control}
               value={form.deposito}
@@ -178,17 +165,8 @@ function Maal() {
               }}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Nilai Harta Perhiasan
-            </span>
           <Form.Row className="my-2">
             <NumberFormat
-              aria-label="Emas, perak, atau sejenisnya"
               prefix={"Rp. "}
               thousandSeparator={true}
               placeholder="Emas, perak, atau sejenisnya"
@@ -205,17 +183,8 @@ function Maal() {
               }}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Nilai Properti atau Kendaraan
-            </span>
           <Form.Row className="my-2">
             <NumberFormat
-              aria-label="Nilai properti atau kendaraan"
               prefix={"Rp. "}
               thousandSeparator={true}
               placeholder="Nilai properti atau kendaraan"
@@ -232,17 +201,8 @@ function Maal() {
               }}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Lainnya (Saham,Piutang,dll)
-            </span>
           <Form.Row className="my-2">
             <NumberFormat
-              aria-label="Lainnya (saham, piutang, dll)"
               prefix={"Rp. "}
               thousandSeparator={true}
               placeholder="Lainnya (saham, piutang, dll)"
@@ -259,17 +219,8 @@ function Maal() {
               }}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Hutang atau cicilan
-            </span>
           <Form.Row className="my-2">
             <NumberFormat
-              aria-label="Hutang atau Cicilan"
               prefix={"Rp. "}
               thousandSeparator={true}
               placeholder="Hutang atau Cicilan"
@@ -286,17 +237,8 @@ function Maal() {
               }}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Jumlah Zakat
-            </span>
           <Form.Row className="my-2">
             <NumberFormat
-              aria-label="Jumlah zakat"
               prefix={"Rp. "}
               thousandSeparator={true}
               placeholder="Jumlah Zakat"
@@ -312,17 +254,8 @@ function Maal() {
               }}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Pilih Amil Zakat
-            </span>
           <Form.Row className="my-2">
             <AsyncSelect
-              aria-label="Pilih Amil Zakat"
               cacheOptions
               defaultOptions
               loadOptions={getAmilZakat}
@@ -331,17 +264,8 @@ function Maal() {
               styles={customSelectStyles}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Pilih Metode Pembayaran
-            </span>
           <Form.Row className="my-2">
             <AsyncSelect
-              aria-label="Pilih metode pembayaran"
               cacheOptions
               defaultOptions
               loadOptions={getPaymentMethod}
@@ -351,17 +275,8 @@ function Maal() {
               onChange={(e) => onChangePayment(e)}
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Nama Pengguna
-            </span>
           <Form.Row className="my-2">
             <Form.Control
-              aria-label="Nama Pengguna"
               placeholder="Nama Pengguna"
               name="username"
               value={
@@ -375,17 +290,8 @@ function Maal() {
               }
             />
           </Form.Row>
-          <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Nomor Telepon
-            </span>
           <Form.Row className="my-2">
             <NumberFormat
-            aria-label="Nomor Telepon"
               format="####-####-####"
               mask="_"
               placeholder="Nomor Telepon"
@@ -405,7 +311,6 @@ function Maal() {
         </Form>
       </div>
       <ToggleButton
-        aria-label="Info terbaru"
         form={form}
         setForm={setForm}
         message="Apakah anda ingin mendapatkan informasi terkini?"

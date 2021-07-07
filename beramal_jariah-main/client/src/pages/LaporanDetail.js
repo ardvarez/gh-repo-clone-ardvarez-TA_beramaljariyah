@@ -119,7 +119,7 @@ function LaporanDetail() {
                   <span
                     style={{
                       fontFamily: "Pathway Gothic One",
-                      color: "#006641",
+                      color: "#00a441",
                       fontSize: 18,
                     }}
                   >
@@ -128,7 +128,7 @@ function LaporanDetail() {
                   <span
                     style={{
                       fontFamily: "Pathway Gothic One",
-                      color: "#006641",
+                      color: "#00a441",
                       fontWeight: "bolder",
                       fontSize: 24,
                     }}

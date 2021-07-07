@@ -169,7 +169,7 @@ function DetailProgram() {
             totalDonatur={data.totalDonatur}
             pengelola={data.pengelola.name}
           />
-          {/* <Penerima /> */}
+          <Penerima />
           <Share url={path.pathname} />
           <MainProgramNav
             state={navHandler}

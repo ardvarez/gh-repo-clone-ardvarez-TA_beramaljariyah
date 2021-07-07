@@ -52,7 +52,7 @@ function Laporan(props) {
                       style={{
                         width: "100%",
                         padding: 10,
-                        backgroundColor: "#e9ecef",
+                        backgroundColor: "#C4C4C4",
                         borderRadius: 10,
                         padding: "20px 10px 20px 40px",
                       }}
@@ -61,7 +61,7 @@ function Laporan(props) {
                       <span
                         style={{
                           fontFamily: "Pathway Gothic One",
-                          color: "#006641",
+                          color: "#00a441",
                           fontSize: 18,
                         }}
                       >
@@ -70,7 +70,7 @@ function Laporan(props) {
                       <span
                         style={{
                           fontFamily: "Pathway Gothic One",
-                          color: "#006641",
+                          color: "#00a441",
                           fontWeight: "bolder",
                           fontSize: 24,
                         }}

@@ -92,7 +92,7 @@ function WakafForm(props) {
   return (
     <>
       <Form className="w-100 my-3">
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <NumberFormat
             prefix={"Rp. "}
             thousandSeparator={true}
@@ -109,7 +109,7 @@ function WakafForm(props) {
             required
           />
         </Form.Row>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <NumberFormat
             prefix={"Rp. "}
             thousandSeparator={true}
@@ -126,7 +126,7 @@ function WakafForm(props) {
             }}
           />
         </Form.Row>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <AsyncSelect
             cacheOptions
             defaultOptions
@@ -137,7 +137,7 @@ function WakafForm(props) {
             onChange={(e) => onChangePayment(e)}
           />
         </Form.Row>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <Form.Control
             placeholder="Nama Pengguna"
             name="username"
@@ -150,7 +150,7 @@ function WakafForm(props) {
             }
           />
         </Form.Row>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <NumberFormat
             format="####-####-####"
             mask="_"

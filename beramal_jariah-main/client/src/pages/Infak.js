@@ -90,16 +90,6 @@ function Infak() {
         <Loading />
       ) : (
         <>
-          <h1
-              style={{
-                fontSize: 36,
-                fontWeight: "bold",
-                margin: "-10px 0 20px 0",
-                color: "#006641"
-              }}
-            >
-              Daftar Program Infak
-            </h1>
           <MainProgramInformationHeader
             title="Infak"
             totalDana={infaqPrograms.totalDana}

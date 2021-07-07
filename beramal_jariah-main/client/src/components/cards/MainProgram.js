@@ -4,7 +4,7 @@ function MainProgram() {
   const navigation = useHistory();
   const mainProgramItems = [
     {
-      bgColor: "#EEB507",
+      bgColor: "#021540",
       content: "infak",
       navigate: () => navigation.push("/infak"),
     },
@@ -40,10 +40,10 @@ function MainProgram() {
           >
             <span
               style={{
-                fontFamily: "open sans",
+                fontFamily: "Pathway Gothic One",
                 color: "#fff",
                 fontWeight: "bolder",
-                fontSize: 40,
+                fontSize: 60,
                 letterSpacing: 2,
               }}
             >

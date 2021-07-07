@@ -19,11 +19,11 @@ function MainProgramDetailHeader(props) {
           height="246px"
         />
       </div>
-      <div className="program-information" style={{ width: "65%" }}>
+      <div className="program-information" style={{ width: "60%" }}>
         <div
           className="program-information-title"
           style={{
-            fontFamily: "open sans",
+            fontFamily: "Pathway Gothic One",
             fontSize: 24,
             fontWeight: "bolder",
           }}
@@ -31,13 +31,11 @@ function MainProgramDetailHeader(props) {
           {props.title}
         </div>
         <div className="program-information-pengelola">
-          <span style={{
-            fontWeight: "normal",
-          }}>
+          <span>
             Pengelola : &nbsp;
             <span
               style={{
-                color: "#006641",
+                color: "#00a441",
                 fontWeight: "bolder",
               }}
             >
@@ -57,10 +55,10 @@ function MainProgramDetailHeader(props) {
               <span>Donatur</span>
               <span
                 style={{
-                  fontFamily: "open sans",
-                  color: "#006641",
+                  fontFamily: "Pathway Gothic One",
+                  color: "#00a441",
                   fontWeight: "bolder",
-                  fontSize: 18,
+                  fontSize: 16,
                 }}
               >
                 {props.totalDonatur}
@@ -70,10 +68,10 @@ function MainProgramDetailHeader(props) {
               <span>Terkumpul</span>
               <span
                 style={{
-                  fontFamily: "open sans",
-                  color: "#006641",
+                  fontFamily: "Pathway Gothic One",
+                  color: "#00a441",
                   fontWeight: "bolder",
-                  fontSize: 18,
+                  fontSize: 16,
                 }}
               >
                 {toRupiah(parseInt(danaTerkumpul), { formal: false })}
@@ -83,10 +81,10 @@ function MainProgramDetailHeader(props) {
               <span>Target</span>
               <span
                 style={{
-                  fontFamily: "open sans",
-                  color: "#006641",
+                  fontFamily: "Pathway Gothic One",
+                  color: "#00a441",
                   fontWeight: "bolder",
-                  fontSize: 18,
+                  fontSize: 16,
                 }}
               >
                 {toRupiah(parseInt(targetDana), { formal: false })}

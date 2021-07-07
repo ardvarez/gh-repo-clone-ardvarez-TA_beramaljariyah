@@ -71,23 +71,23 @@ function InfaqForm(props) {
     navigate.push("/transaction-report");
   };
 
-  const userLogged = () => {
-    if (user.statusLogin) {
-      setForm({
-        ...form,
-        username: user.user.name,
-        phone: user.user.phone
-      });
-    } else {
-      setForm({
-        ...form,
-      });
-    }
-  }
+  // const userLogged = () => {
+  //   if (user.statusLogin) {
+  //     setForm({
+  //       ...form,
+  //       username: user.user.name,
+  //       phone: user.user.phone
+  //     });
+  //   } else {
+  //     setForm({
+  //       ...form,
+  //     });
+  //   }
+  // }
 
-  useEffect(() => {
-    userLogged()
-  },[])
+  // useEffect(() => {
+  //   userLogged()
+  // },[])
 
   const customSelectStyles = {
     control: (styles) => ({
@@ -96,28 +96,16 @@ function InfaqForm(props) {
       borderRadius: 15,
       height: 50,
     }),
-    placeholder: (styles) => ({
-      color: "#545454"
-    }),
   };
 
   return (
     <>
       <Form className="w-100 my-3">
-      <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Jumlah Infak
-            </span>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <NumberFormat
-            aria-label="Jumlah Infak"
             prefix={"Rp. "}
             thousandSeparator={true}
-            placeholder="Jumlah Infak"
+            placeholder="Jumlah Infaq"
             customInput={Form.Control}
             value={form.programCost}
             onValueChange={(values) => {
@@ -130,17 +118,8 @@ function InfaqForm(props) {
             required
           />
         </Form.Row>
-        <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Pilih Metode Pembayaran
-            </span>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <AsyncSelect
-            aria-label="Pilih Metode Pembayaran"
             cacheOptions
             defaultOptions
             loadOptions={getPaymentMethod}
@@ -150,17 +129,8 @@ function InfaqForm(props) {
             onChange={(e) => onChangePayment(e)}
           />
         </Form.Row>
-        <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Nama Pengguna
-            </span>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <Form.Control
-            aria-label="Nama Pengguna"
             placeholder="Nama Pengguna"
             name="username"
             value={user.user == null ? form.username : user.user.name}
@@ -173,17 +143,8 @@ function InfaqForm(props) {
             required
           />
         </Form.Row>
-        <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Nomor Telepon
-            </span>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <NumberFormat
-            aria-label="Nomor Telepon"
             format="####-####-####"
             mask="_"
             placeholder="Nomor Telepon"
@@ -211,10 +172,9 @@ function InfaqForm(props) {
         </Form.Row>
         <Form.Row
           className={form.message ? "show-message" : "hide-message"}
-          style={{ width: "75%", margin: "10px 0" }}
+          style={{ width: "50%", margin: "10px 0" }}
         >
           <Form.Control
-            aria-label="Tulis Pesan Anda"
             as="textarea"
             placeholder="Tulis Pesan Anda"
             style={{ height: 80 }}

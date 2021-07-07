@@ -88,7 +88,7 @@ function Search() {
           aria-label="Search"
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
-          style={{ border: "none", height: 38, borderRadius: 20, fontFamily:"open sans", fontSize: "14", fontWeight: "regular" }}
+          style={{ border: "none", height: 38, borderRadius: 20 }}
         />
         <InputGroup.Prepend>
           <InputGroup.Text

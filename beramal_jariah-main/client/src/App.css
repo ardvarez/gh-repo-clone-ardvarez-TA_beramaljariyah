@@ -1,7 +1,6 @@
 /* Custom Font */
 @import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 .toast{
@@ -20,7 +19,7 @@
 }
 
 .whatsapp-btn{
-  background-color: #006641;
+  background-color: #25D366;
 }
 
 .facebook-btn{
@@ -152,11 +151,11 @@ button:disabled{
   top: -13px;
   left: -17px;
   border-radius: 50%;
-  background-color: #006641;
+  background-color: #00a441;
 }
 
 .report-card-title {
-  font-family: "open sans", sans-serif;
+  font-family: "Pathway Gothic One", sans-serif;
   font-size: 24px;
   font-weight: bold;
 }
@@ -207,24 +206,24 @@ button:disabled{
 .nav-zakat-detail {
   background-color: #fff;
   color: #000;
-  border: 1px solid #006641;
+  border: 1px solid #00a441;
   border-radius: 20px;
   padding: 5px 0;
   transition: all 0.5s ease;
 }
 
 .nav-detail:hover {
-  background-color: #006641;
+  background-color: #00a441;
   color: #fff;
 }
 
 .nav-zakat-detail:hover {
-  background-color: #006641;
+  background-color: #00a441;
   color: #fff;
 }
 
 .btn-active-borderless {
-  background-color: #006641;
+  background-color: #00a441;
   color: #fff;
 }
 
@@ -233,7 +232,7 @@ button:disabled{
 }
 
 .active-radio-btn{
-  background-color: #006641;
+  background-color: #00a441;
 }
 
 .inactive-radio-btn{
@@ -251,7 +250,7 @@ button:disabled{
 
 .active-auth-nav{
   background-color: #F7F8FB;
-  color: #006641;
+  color: #00a441;
   transition: all .3s ease;
 }
 
@@ -261,16 +260,10 @@ button:disabled{
 }
 
 .inactive-nominal{
-  background-color: #006641;
+  background-color: #00a441;
 }
 
 .active-nominal{
   background-color: #007348;
   transition: all .3s ease;
-}
-.hr{
-  height:2px;
-  border-width:0;
-  color:black;
-  background-color:black
 }

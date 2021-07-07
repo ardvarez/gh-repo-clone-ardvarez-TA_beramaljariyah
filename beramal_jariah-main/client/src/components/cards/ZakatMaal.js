@@ -15,7 +15,6 @@ function ZakatMaal() {
         className="d-flex flex-column m-auto"
         style={{ backgroundColor: "transparent", width: "80%" }}
       >
-        <span>Zakat Maal merupakan zakat yang dikenakan atas harta yang dimiliki oleh individu</span>
         <MaalForm />
       </div>
     </motion.div>

@@ -17,28 +17,25 @@ function Program(props) {
       className="card-bottom-shadow"
       onClick={() => props.action()}
     >
-      <Card.Img variant="top" alt="" src={props?.image} width="340px" height="246px" />
+      <Card.Img variant="top" src={props?.image} width="340px" height="246px" alt=""/>
       <Card.Body>
         <Card.Title
           style={{
-            fontFamily: "open sans",
-            fontSize: 16,
+            fontFamily: "Pathway Gothic One",
+            fontSize: 24,
             fontWeight: "bolder",
           }}
         >
-          {props?.title?.substr(0,50)+ ''}
+          {props?.title?.substr(0, 50) + "  ..."}
         </Card.Title>
         <Card.Text>
           {props.withPengelola ? (
-            <span style={{ 
-              fontFamily: "open sans",
-              fontSize: 14,
-            }}>
+            <span>
               Pengelola : &nbsp;
               <span
                 style={{
-                  fontFamily: "open sans",
-                  color: "#006641",
+                  fontFamily: "Pathway Gothic One",
+                  color: "#00a441",
                   fontWeight: "bolder",
                   fontSize: 14,
                 }}
@@ -57,14 +54,10 @@ function Program(props) {
           />
           <div className="w-100 d-flex justify-content-between align-items-center">
             <div className="donate-section d-flex flex-column">
-              <span style={{ 
-              fontFamily: "open sans",
-              fontSize: 16,
-              }}
-              >Donatur</span>
+              <span>Donatur</span>
               <span
                 style={{
-                  fontFamily: "open sans",
+                  fontFamily: "Pathway Gothic One",
                   color: "#006641",
                   fontWeight: "bolder",
                   fontSize: 16,
@@ -74,14 +67,10 @@ function Program(props) {
               </span>
             </div>
             <div className="money-section d-flex flex-column">
-              <span style={{ 
-              fontFamily: "open sans",
-              fontSize: 16,
-              }}
-              >Terkumpul</span>
+              <span>Terkumpul</span>
               <span
                 style={{
-                  fontFamily: "open sans",
+                  fontFamily: "Pathway Gothic One",
                   color: "#006641",
                   fontWeight: "bolder",
                   fontSize: 16,

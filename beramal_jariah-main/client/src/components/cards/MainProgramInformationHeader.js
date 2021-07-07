@@ -1,5 +1,4 @@
 import toRupiah from "@develoka/angka-rupiah-js";
-import Share from "../buttons/Share";
 
 function MainProgramInformationHeader(props) {
   return (
@@ -13,7 +12,7 @@ function MainProgramInformationHeader(props) {
       >
         <span
           style={{
-            fontFamily: "open sans",
+            fontFamily: "Pathway Gothic One",
             fontSize: 20,
           }}
         >
@@ -21,10 +20,10 @@ function MainProgramInformationHeader(props) {
         </span>
         <span
           style={{
-            fontFamily: "open sans",
-            color: "#006641",
+            fontFamily: "Pathway Gothic One",
+            color: "#00a441",
             fontWeight: "bolder",
-            fontSize: 24,
+            fontSize: 28,
           }}
         >
           {props.totalProgram}
@@ -36,7 +35,7 @@ function MainProgramInformationHeader(props) {
       >
         <span
           style={{
-            fontFamily: "open sans",
+            fontFamily: "Pathway Gothic One",
             fontSize: 20,
           }}
         >
@@ -44,15 +43,14 @@ function MainProgramInformationHeader(props) {
         </span>
         <span
           style={{
-            fontFamily: "open sans",
-            color: "#006641",
+            fontFamily: "Pathway Gothic One",
+            color: "#00a441",
             fontWeight: "bolder",
-            fontSize: 24,
+            fontSize: 28,
           }}
         >
           {toRupiah(parseInt(props.totalDana), { formal: false })}
         </span>
-        
       </div>
     </div>
   );
