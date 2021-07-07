@@ -268,9 +268,9 @@ button:disabled{
   background-color: #007348;
   transition: all .3s ease;
 }
-.hr{
-  height:2px;
-  border-width:0;
-  color:black;
-  background-color:black
+hr{
+  width: 100%;
+  border: 10px;
+  background-color: #006641;
+  border-radius: 2px;
 }

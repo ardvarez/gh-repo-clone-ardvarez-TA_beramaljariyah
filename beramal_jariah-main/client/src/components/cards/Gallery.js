@@ -7,7 +7,7 @@ function Gallery(props) {
       <div className="w-100 bg-light text-center py-2 my-3">
         <span
           style={{
-            fontFamily: "Pathway Gothic One",
+            fontFamily: "Open Sans",
             fontSize: 20,
             fontWeight: "bolder",
           }}

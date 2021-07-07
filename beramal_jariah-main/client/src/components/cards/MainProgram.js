@@ -4,17 +4,17 @@ function MainProgram() {
   const navigation = useHistory();
   const mainProgramItems = [
     {
-      bgColor: "#EEB507",
+      bgColor: "#00473a",
       content: "infak",
       navigate: () => navigation.push("/infak"),
     },
     {
-      bgColor: "#00A441",
+      bgColor: "#660055",
       content: "zakat",
       navigate: () => navigation.push("/zakat"),
     },
     {
-      bgColor: "#6962B6",
+      bgColor: "#664e00",
       content: "wakaf",
       navigate: () => navigation.push("/wakaf"),
     },
@@ -23,14 +23,14 @@ function MainProgram() {
   return (
     <div
       className="d-flex justify-content-around"
-      style={{ width: 1037, marginTop: 50 }}
+      style={{ width: 1100, marginTop: 40 }}
     >
       {mainProgramItems.map((item) => {
         return (
           <div
             style={{
-              width: 270,
-              height: 150,
+              width: 300,
+              height: 133,
               backgroundColor: `${item.bgColor}`,
               borderRadius: 10,
               cursor: "pointer",
@@ -40,7 +40,7 @@ function MainProgram() {
           >
             <span
               style={{
-                fontFamily: "open sans",
+                fontFamily: "Open Sans",
                 color: "#fff",
                 fontWeight: "bolder",
                 fontSize: 40,

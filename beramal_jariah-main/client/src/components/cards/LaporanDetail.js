@@ -15,11 +15,11 @@ function LaporanDetail(props) {
     >
       <Card>
         <Card.Header
-          style={{ fontFamily: "Pathway Gothic One", fontWeight: "bolder" }}
+          style={{ fontFamily: "Open Sans", fontWeight: "bolder" }}
         >
           <span>Laporan</span>
         </Card.Header>
-        <Card.Body style={{ fontFamily: "Pathway Gothic One" }}>
+        <Card.Body style={{ fontFamily: "Open Sans" }}>
           30 Mei 2021
         </Card.Body>
       </Card>
@@ -36,7 +36,7 @@ function LaporanDetail(props) {
         >
           <span
             style={{
-              fontFamily: "Pathway Gothic One",
+              fontFamily: "Open Sans",
               color: "#006641",
               fontSize: 18,
             }}
@@ -45,7 +45,7 @@ function LaporanDetail(props) {
           </span>
           <span
             style={{
-              fontFamily: "Pathway Gothic One",
+              fontFamily: "Open Sans",
               color: "#006641",
               fontWeight: "bolder",
               fontSize: 24,
@@ -58,7 +58,7 @@ function LaporanDetail(props) {
       <div className="w-100 d-flex flex-column text-justify">
         <span
           style={{
-            fontFamily: "Pathway Gothic One",
+            fontFamily: "Open Sans",
             fontSize: 20,
             fontWeight: "bold",
             marginBottom: 15,
@@ -69,7 +69,7 @@ function LaporanDetail(props) {
         </span>
         <span
           style={{
-            fontFamily: "Pathway Gothic One",
+            fontFamily: "Open Sans",
             fontSize: 18,
           }}
         >

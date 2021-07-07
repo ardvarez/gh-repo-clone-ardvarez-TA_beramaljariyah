@@ -40,7 +40,7 @@ function Donatur(props) {
                     >
                       <span
                         style={{
-                          fontFamily: "Pathway Gothic One",
+                          fontFamily: "Open Sans",
                           color: "#000",
                           fontSize: 18,
                         }}
@@ -49,7 +49,7 @@ function Donatur(props) {
                       </span>
                       <span
                         style={{
-                          fontFamily: "Pathway Gothic One",
+                          fontFamily: "Open Sans",
                           color: "#006641",
                           fontWeight: "bolder",
                           fontSize: 24,

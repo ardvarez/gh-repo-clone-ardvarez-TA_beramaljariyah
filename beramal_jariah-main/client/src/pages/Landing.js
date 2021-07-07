@@ -68,10 +68,10 @@ function Landing() {
         .get(`http://localhost:5000/programs?id=${getLaporan[i].programId}`)
         .then(
           (result) =>
-            (modifiedData = {
-              laporan: getLaporan[i],
-              program: result.data[0],
-            })
+          (modifiedData = {
+            laporan: getLaporan[i],
+            program: result.data[0],
+          })
         );
 
       getLaporanProgram.push(modifiedData);
@@ -145,20 +145,27 @@ function Landing() {
         <>
           <div
             className="program-card-wrapper card-shadow-bold py-3 px-4"
-            style={{ width: 1037, borderRadius: 15, marginTop: 50 }}
+            style={{ width: 1037, borderRadius: 15, marginTop: 50, backgroundColor: "#fff" }}
           >
             <div className="program-card-title">
-              <span
+              <h1
                 style={{
-                  fontFamily: "Pathway Gothic One",
-                  color: "#00a441",
+                  fontFamily: "Open Sans",
+                  color: "#006641",
                   fontWeight: "bolder",
-                  fontSize: 32,
-                  letterSpacing: 3,
+                  fontSize: 28,
                 }}
               >
                 Daftar Program Terbaru
-              </span>
+              </h1>
+              <hr
+                style={{
+                  color: "#006641",
+                  backgroundColor: "#006641",
+                  height: 5,
+                }}
+              >
+              </hr>
             </div>
             <div className="w-100 program-card-content d-flex justify-content-between mt-2">
               {datas.programs.map((item) => {
@@ -170,7 +177,7 @@ function Landing() {
                     donatur={item.donatur}
                     danaTerkumpul={item.danaTerkumpul}
                     target={item.target}
-                    style={{ marginBottom: 15, width: "20rem" }}
+                    style={{ marginBottom: 8, width: "20rem", marginTop: 10 }}
                     action={() => navigate.push(`/${item.type}/${item.id}`)}
                   />
                 );
@@ -186,35 +193,42 @@ function Landing() {
               >
                 <span
                   style={{
-                    fontFamily: "Pathway Gothic One",
-                    color: "#00a441",
+                    fontFamily: "Open Sans",
+                    color: "#006641",
                     fontWeight: "bolder",
-                    fontSize: 24,
+                    fontSize: 18,
                     marginRight: 8,
                   }}
                 >
                   Lihat Selengkapnya
                 </span>
-                <img src={LgDetailIcon} alt="Large Detail Icon" height="20px" />
+                <img src={LgDetailIcon} alt="Large Detail Icon" height="14px" />
               </div>
             </div>
           </div>
           <div
             className="program-card-wrapper card-shadow-bold py-3 px-4"
-            style={{ width: 1037, borderRadius: 15, marginTop: 50 }}
+            style={{ width: 1037, borderRadius: 15, marginTop: 50, backgroundColor: "#fff" }}
           >
             <div className="program-card-title">
-              <span
+              <h1
                 style={{
-                  fontFamily: "Pathway Gothic One",
-                  color: "#00a441",
+                  fontFamily: "Open Sans",
+                  color: "#006641",
                   fontWeight: "bolder",
-                  fontSize: 32,
-                  letterSpacing: 3,
+                  fontSize: 28,
                 }}
               >
                 Daftar Laporan Terbaru
-              </span>
+              </h1>
+              <hr
+                style={{
+                  color: "#006641",
+                  backgroundColor: "#006641",
+                  height: 5,
+                }}
+              >
+              </hr>
             </div>
             <div className="w-100 program-card-content d-flex justify-content-between mt-2">
               {datas.laporans.map((item) => {
@@ -226,7 +240,7 @@ function Landing() {
                     donatur={item.donatur}
                     danaTerkumpul={item.danaTerkumpul}
                     target={item.program.target}
-                    style={{ marginBottom: 15, width: "20rem" }}
+                    style={{ marginBottom: 8, width: "20rem", marginTop: 10 }}
                     action={() =>
                       navigate.push(
                         `/${item.program.type}/${item.program.id}/laporan-detail/${item.laporan.id}`
@@ -246,23 +260,23 @@ function Landing() {
               >
                 <span
                   style={{
-                    fontFamily: "Pathway Gothic One",
-                    color: "#00a441",
+                    fontFamily: "Open Sans",
+                    color: "#006641",
                     fontWeight: "bolder",
-                    fontSize: 24,
+                    fontSize: 18,
                     marginRight: 8,
                   }}
                 >
                   Lihat Selengkapnya
                 </span>
-                <img src={LgDetailIcon} alt="Large Detail Icon" height="20px" />
+                <img src={LgDetailIcon} alt="Large Detail Icon" height="14px" />
               </div>
             </div>
           </div>
           <LandingBottom
             totalDana={datas.totalDana}
             totalProgram={datas.totalProgram}
-            style={{ marginTop: 70 }}
+            style={{ marginTop: 40 }}
           />
           <Footer />
         </>

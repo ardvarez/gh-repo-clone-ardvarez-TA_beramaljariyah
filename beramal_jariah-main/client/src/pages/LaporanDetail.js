@@ -96,13 +96,13 @@ function LaporanDetail() {
               <Card>
                 <Card.Header
                   style={{
-                    fontFamily: "Pathway Gothic One",
+                    fontFamily: "Open Sans",
                     fontWeight: "bolder",
                   }}
                 >
                   <span>Laporan</span>
                 </Card.Header>
-                <Card.Body style={{ fontFamily: "Pathway Gothic One" }}>
+                <Card.Body style={{ fontFamily: "Open Sans" }}>
                   {CustomDate(data.laporan.date)}
                 </Card.Body>
               </Card>
@@ -110,6 +110,7 @@ function LaporanDetail() {
                 <div
                   style={{
                     width: "100%",
+                    backgroundColor: "#e9ecef",
                     padding: 10,
                     borderRadius: 10,
                     padding: "20px 10px 20px 40px",
@@ -118,7 +119,7 @@ function LaporanDetail() {
                 >
                   <span
                     style={{
-                      fontFamily: "Pathway Gothic One",
+                      fontFamily: "Open Sans",
                       color: "#006641",
                       fontSize: 18,
                     }}
@@ -127,10 +128,10 @@ function LaporanDetail() {
                   </span>
                   <span
                     style={{
-                      fontFamily: "Pathway Gothic One",
+                      fontFamily: "Open Sans",
                       color: "#006641",
                       fontWeight: "bolder",
-                      fontSize: 24,
+                      fontSize: 20,
                     }}
                   >
                     {toRupiah(215000000, { formal: false })}
