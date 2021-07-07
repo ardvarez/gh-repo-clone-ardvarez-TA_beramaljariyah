@@ -57,7 +57,7 @@ function WakafForm(props) {
 
     setForm({
       ...form,
-      idPayment: e.value,
+      paymentId: e.value,
       paymentCost,
       paymentMethod: selectedPayment[0],
     });
@@ -87,16 +87,48 @@ function WakafForm(props) {
       borderRadius: 15,
       height: 50,
     }),
+    placeholder: (styles) => ({
+      ...styles,
+      color: "#545454"
+    })
   };
-
+  const disabledState = () => {
+    if (user.loginStatus) {
+      if (form.paymentId === 0 || form.programCost === "") {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      if (
+        form.paymentId === 0 ||
+        form.programCost === "" ||
+        form.username === "" ||
+        form.phone === ""
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  };
   return (
     <>
       <Form className="w-100 my-3">
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <span
+          style={{
+            fontFamily: "open sans",
+            fontWeight: "bold",
+            fontSize: 14,
+          }}>
+          Jumlah Wakaf
+        </span>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <NumberFormat
             prefix={"Rp. "}
             thousandSeparator={true}
             placeholder="Jumlah Wakaf"
+            aria-label="Jumlah Wakaf"
             customInput={Form.Control}
             value={form.programCost}
             onValueChange={(values) => {
@@ -109,11 +141,20 @@ function WakafForm(props) {
             required
           />
         </Form.Row>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <span
+          style={{
+            fontFamily: "open sans",
+            fontWeight: "bold",
+            fontSize: 14,
+          }}>
+          Jumlah Infaq Pengembangan Teknologi
+        </span>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <NumberFormat
             prefix={"Rp. "}
             thousandSeparator={true}
             placeholder="Jumlah Infaq Pengembangan Teknologi"
+            aria-label="Jumlah Infaq Pengembangan Teknologi"
             customInput={Form.Control}
             value={getPengembanganCost()}
             onValueChange={(values) => {
@@ -126,20 +167,38 @@ function WakafForm(props) {
             }}
           />
         </Form.Row>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <span
+          style={{
+            fontFamily: "open sans",
+            fontWeight: "bold",
+            fontSize: 14,
+          }}>
+          Pilih Metode Pembayaran
+        </span>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <AsyncSelect
             cacheOptions
             defaultOptions
             loadOptions={getPaymentMethod}
             placeholder="Pilih Metode Pembayaran"
+            aria-label="Pilih Metode Pembayaran"
             className="form-selection"
             styles={customSelectStyles}
             onChange={(e) => onChangePayment(e)}
           />
         </Form.Row>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <span
+          style={{
+            fontFamily: "open sans",
+            fontWeight: "bold",
+            fontSize: 14,
+          }}>
+          Nama Pengguna
+        </span>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <Form.Control
             placeholder="Nama Pengguna"
+            aria-label="Nama Pengguna"
             name="username"
             value={user.loginStatus ? user.user.name : form.username}
             onChange={(e) =>
@@ -150,11 +209,20 @@ function WakafForm(props) {
             }
           />
         </Form.Row>
-        <Form.Row className="my-2" style={{ width: "75%" }}>
+        <span
+          style={{
+            fontFamily: "open sans",
+            fontWeight: "bold",
+            fontSize: 14,
+          }}>
+          Nomor Telepon
+        </span>
+        <Form.Row className="my-2" style={{ width: "50%" }}>
           <NumberFormat
             format="####-####-####"
             mask="_"
             placeholder="Nomor Telepon"
+            aria-label="Nomor Telepon"
             customInput={Form.Control}
             name="phone"
             value={user.loginStatus ? user.user.phone : form.phone}
@@ -183,6 +251,7 @@ function WakafForm(props) {
           <Form.Control
             as="textarea"
             placeholder="Tulis Pesan Anda"
+            aria-label="Tulis Pesan Anda"
             style={{ height: 80 }}
             value={form.userMessage}
             onChange={(e) => {
@@ -194,7 +263,7 @@ function WakafForm(props) {
           />
         </Form.Row>
         <Form.Row style={{ marginTop: 30 }}>
-          <Next onClick={() => submit()} />
+          <Next onClick={() => submit()} disabled={disabledState()} />
         </Form.Row>
       </Form>
     </>

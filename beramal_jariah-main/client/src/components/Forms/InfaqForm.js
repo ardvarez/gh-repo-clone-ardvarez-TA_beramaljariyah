@@ -87,7 +87,7 @@ function InfaqForm(props) {
 
   useEffect(() => {
     userLogged()
-  },[])
+  }, [])
 
   const customSelectStyles = {
     control: (styles) => ({
@@ -100,18 +100,38 @@ function InfaqForm(props) {
       color: "#545454"
     }),
   };
+  const disabledState = () => {
+    if (user.loginStatus) {
+      if (form.paymentId === 0 || form.programCost === "") {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      if (
+        form.paymentId === 0 ||
+        form.programCost === "" ||
+        form.username === "" ||
+        form.phone === ""
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  };
 
   return (
     <>
       <Form className="w-100 my-3">
-      <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Jumlah Infak
-            </span>
+        <span
+          style={{
+            fontFamily: "open sans",
+            fontWeight: "bold",
+            fontSize: 14,
+          }}>
+          Jumlah Infak
+        </span>
         <Form.Row className="my-2" style={{ width: "75%" }}>
           <NumberFormat
             aria-label="Jumlah Infak"
@@ -131,13 +151,13 @@ function InfaqForm(props) {
           />
         </Form.Row>
         <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Pilih Metode Pembayaran
-            </span>
+          style={{
+            fontFamily: "open sans",
+            fontWeight: "bold",
+            fontSize: 14,
+          }}>
+          Pilih Metode Pembayaran
+        </span>
         <Form.Row className="my-2" style={{ width: "75%" }}>
           <AsyncSelect
             aria-label="Pilih Metode Pembayaran"
@@ -151,13 +171,13 @@ function InfaqForm(props) {
           />
         </Form.Row>
         <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Nama Pengguna
-            </span>
+          style={{
+            fontFamily: "open sans",
+            fontWeight: "bold",
+            fontSize: 14,
+          }}>
+          Nama Pengguna
+        </span>
         <Form.Row className="my-2" style={{ width: "75%" }}>
           <Form.Control
             aria-label="Nama Pengguna"
@@ -174,13 +194,13 @@ function InfaqForm(props) {
           />
         </Form.Row>
         <span
-            style={{ 
-              fontFamily: "open sans",
-              fontWeight: "bold",
-              fontSize: 14,
-            }}>
-              Nomor Telepon
-            </span>
+          style={{
+            fontFamily: "open sans",
+            fontWeight: "bold",
+            fontSize: 14,
+          }}>
+          Nomor Telepon
+        </span>
         <Form.Row className="my-2" style={{ width: "75%" }}>
           <NumberFormat
             aria-label="Nomor Telepon"
@@ -228,7 +248,7 @@ function InfaqForm(props) {
           />
         </Form.Row>
         <Form.Row style={{ marginTop: 30 }}>
-          <Next onClick={() => submit()} />
+          <Next onClick={() => submit()} disabled={disabledState()} />
         </Form.Row>
       </Form>
     </>
