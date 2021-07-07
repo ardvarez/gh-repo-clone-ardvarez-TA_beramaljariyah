@@ -85,18 +85,24 @@ function Login() {
               style={{
                 fontSize: 40,
                 fontWeight: "bolder",
-                margin: "-10px 0 20px 0",
+                marginTop: "-10px",
               }}
             >
               Selamat Datang
             </h1>
             <Form className="w-100">
+            <label style={{
+                  fontWeight: "bolder",
+                  fontSize: 16
+                }}>
+                  Email
+                </label>
               <Form.Row>
-                <img
+                {/* <img
                   src={EmailIcon}
                   alt="Email Icon"
                   style={{ marginRight: 15 }}
-                />
+                /> */}
                 <Form.Control
                   placeholder="Email"
                   aria-label="email"
@@ -105,12 +111,18 @@ function Login() {
                   required
                 />
               </Form.Row>
+              <label style={{
+                  fontWeight: "bolder",
+                  fontSize: 16
+                }}>
+                  Password
+                </label>
               <Form.Row>
-                <img
+                {/* <img
                   src={PasswordIcon}
                   alt="Password Icon"
                   style={{ marginRight: 15 }}
-                />
+                /> */}
                 <Form.Control
                   type="password"
                   aria-label="password"

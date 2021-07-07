@@ -74,21 +74,26 @@ function Register() {
             <img src={DarkLogoWeb} alt="Dark Logo Web" height="85px" />
             <h1
               style={{
-                fontSize: 40,
+                fontSize: 36,
                 fontWeight: "bolder",
-                margin: "-10px 0 20px 0",
+                marginTop: "-10px",
               }}
             >
               Daftar Akun
             </h1>
             <Form className="w-100">
-              <Form.Row>
-                
-                <img
+                <label style={{
+                  fontWeight: "bolder",
+                  fontSize: 16
+                }}>
+                  Nama Pengguna
+                </label>
+              <Form.Row> 
+                {/* <img
                   src={NameIcon}
                   alt="Email Icon"
                   style={{ marginRight: 15 }}
-                />
+                /> */}
                 <Form.Control
                 aria-label='Nama'
                   placeholder="Nama"
@@ -97,12 +102,18 @@ function Register() {
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                 />
               </Form.Row>
+              <label style={{
+                  fontWeight: "bolder",
+                  fontSize: 16
+                }}>
+                  Email
+                </label>
               <Form.Row>
-                <img
+                {/* <img
                   src={EmailIcon}
                   alt="Email Icon"
                   style={{ marginRight: 15 }}
-                />
+                /> */}
                 <Form.Control
                 aria-label='Email'
                   placeholder="Email"
@@ -111,12 +122,18 @@ function Register() {
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                 />
               </Form.Row>
+              <label style={{
+                  fontWeight: "bolder",
+                  fontSize: 16
+                }}>
+                  Nomor WhatsApp
+                </label>
               <Form.Row>
-                <img
+                {/* <img
                   src={WAIcon}
                   alt="Email Icon"
                   style={{ marginRight: 15 }}
-                />
+                /> */}
                 <NumberFormat
                 aria-label='NoWa'
                   format="####-####-####"
@@ -132,12 +149,18 @@ function Register() {
                   required
                 />
               </Form.Row>
+              <label style={{
+                  fontWeight: "bolder",
+                  fontSize: 16
+                }}>
+                  Password
+                </label>
               <Form.Row>
-                <img
+                {/* <img
                   src={PasswordIcon}
                   alt="Password Icon"
                   style={{ marginRight: 15 }}
-                />
+                /> */}
                 <Form.Control
                 aria-label='psw'
                   type="password"
@@ -149,7 +172,13 @@ function Register() {
                   required
                 />
               </Form.Row>
-              <Form.Row style={{ paddingLeft: 64 }}>
+              <label style={{
+                  fontWeight: "bolder",
+                  fontSize: 16
+                }}>
+                  Ketik Ulang Password
+                </label>
+              <Form.Row>
                 <Form.Control
                 aria-label='ulangPsw'
                   type="password"

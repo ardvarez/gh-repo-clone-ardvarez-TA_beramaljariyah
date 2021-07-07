@@ -84,8 +84,8 @@ function WakafForm(props) {
     control: (styles) => ({
       ...styles,
       border: "1px solid rgba(0,0,0,.5)",
-      borderRadius: 15,
-      height: 50,
+      borderRadius: 10,
+      height: 38,
     }),
     placeholder: (styles) => ({
       ...styles,
