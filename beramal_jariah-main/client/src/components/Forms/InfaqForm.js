@@ -31,7 +31,7 @@ function InfaqForm(props) {
     userMessage: "",
     message: false,
   });
-
+  
   const [payment, setPayment] = useState({
     method: [],
   });
