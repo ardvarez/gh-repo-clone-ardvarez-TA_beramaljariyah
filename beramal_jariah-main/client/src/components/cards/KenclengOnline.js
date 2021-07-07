@@ -28,7 +28,7 @@ function KenclengOnline() {
         >
           <span
             style={{
-              color: "#00a441",
+              color: "#006641",
               fontWeight: 900,
               fontSize: 55,
             }}
@@ -37,25 +37,25 @@ function KenclengOnline() {
           </span>
           <span
             style={{
-              color: "#00a441",
+              color: "#006641",
               fontSize: 26,
               marginTop: "-5px",
             }}
           >
-            Sumbang tanpa ribet
+            Kotak Infak Online 
           </span>
           <span
             style={{
-              color: "#00a441",
+              color: "#006641",
               fontSize: 26,
               marginTop: "-15px",
             }}
           >
-            berapapun kamu mau!
+            Bantu Kamu Sumbang Tanpa Ribet
           </span>
           <span
             style={{
-              color: "#00a441",
+              color: "#006641",
               fontWeight: "bolder",
               fontSize: 32,
               marginTop: 10,
@@ -65,7 +65,7 @@ function KenclengOnline() {
           </span>
           <span
             style={{
-              color: "#00a441",
+              color: "#006641",
               fontWeight: "bolder",
               fontSize: 32,
               marginTop: "-20px",

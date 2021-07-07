@@ -83,12 +83,14 @@ function Register() {
             </h1>
             <Form className="w-100">
               <Form.Row>
+                
                 <img
                   src={NameIcon}
                   alt="Email Icon"
                   style={{ marginRight: 15 }}
                 />
                 <Form.Control
+                aria-label='Nama'
                   placeholder="Nama"
                   required
                   value={form.name}
@@ -102,6 +104,7 @@ function Register() {
                   style={{ marginRight: 15 }}
                 />
                 <Form.Control
+                aria-label='Email'
                   placeholder="Email"
                   required
                   value={form.email}
@@ -115,6 +118,7 @@ function Register() {
                   style={{ marginRight: 15 }}
                 />
                 <NumberFormat
+                aria-label='NoWa'
                   format="####-####-####"
                   mask="_"
                   placeholder="Nomor WhatsApp"
@@ -135,6 +139,7 @@ function Register() {
                   style={{ marginRight: 15 }}
                 />
                 <Form.Control
+                aria-label='psw'
                   type="password"
                   placeholder="Kata Sandi"
                   value={form.password}
@@ -146,6 +151,7 @@ function Register() {
               </Form.Row>
               <Form.Row style={{ paddingLeft: 64 }}>
                 <Form.Control
+                aria-label='ulangPsw'
                   type="password"
                   placeholder="Ulangi Kata Sandi"
                   value={form.password2}
@@ -159,7 +165,7 @@ function Register() {
                 <span style={{ fontWeight: "bolder" }}>
                   Saya mau menerima kabar baik melalui WhatsApp
                 </span>
-                <Switch checked={toggle} onChange={() => setToggle(!toggle)} />
+                <Switch checked={toggle} onChange={() => setToggle(!toggle)} aria-label='switch'/>
               </Form.Row>
               <Form.Row>
               <button

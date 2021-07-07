@@ -138,10 +138,36 @@ function Landing() {
     >
       <Slider />
       <KenclengOnline />
+      <div
+        className="program-card-wrapper card-shadow-bold py-3 px-4"
+        style={{ width: 1037, borderRadius: 15, marginTop: 50, backgroundColor: "#fff" }}
+      >
+        <h1
+        style={{
+          fontFamily: "Open Sans",
+          color: "#006641",
+          fontWeight: "bolder",
+          fontSize: 28,
+        }}
+        >
+        Program Utama
+        </h1>
+        <h2
+        style={{
+          fontFamily: "Open Sans",
+          color: "#006641",
+          fontWeight: "reguler",
+          fontSize: 18,
+        }}
+        >
+        Kunjungi Program Utama untuk Berpartisipasi dalam Kegiatan Sosial Kami!
+        </h2>
       <MainProgram />
-      {datas.load ? (
+      </div>
+      {/* {datas.load ? (
         <Loading />
-      ) : (
+      ) :  */}
+      {/* ( */}
         <>
           <div
             className="program-card-wrapper card-shadow-bold py-3 px-4"

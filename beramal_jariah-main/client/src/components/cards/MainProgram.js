@@ -23,7 +23,7 @@ function MainProgram() {
   return (
     <div
       className="d-flex justify-content-around"
-      style={{ width: 1100, marginTop: 40 }}
+      style={{ width: 990, marginTop: 25, marginBottom: 25 }}
     >
       {mainProgramItems.map((item) => {
         return (
@@ -43,7 +43,7 @@ function MainProgram() {
                 fontFamily: "Open Sans",
                 color: "#fff",
                 fontWeight: "bolder",
-                fontSize: 40,
+                fontSize: 30,
                 letterSpacing: 2,
               }}
             >
