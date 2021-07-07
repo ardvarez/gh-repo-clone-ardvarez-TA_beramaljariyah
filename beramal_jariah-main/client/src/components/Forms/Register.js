@@ -72,7 +72,7 @@ function Register() {
             }}
           >
             <img src={DarkLogoWeb} alt="Dark Logo Web" height="85px" />
-            <span
+            <h1
               style={{
                 fontSize: 40,
                 fontWeight: "bolder",
@@ -80,7 +80,7 @@ function Register() {
               }}
             >
               Daftar Akun
-            </span>
+            </h1>
             <Form className="w-100">
               <Form.Row>
                 <img
@@ -162,9 +162,9 @@ function Register() {
                 <Switch checked={toggle} onChange={() => setToggle(!toggle)} />
               </Form.Row>
               <Form.Row>
-                <button
+              <button
                   type="button"
-                  className="login-submit-btn"
+                  className={!checkInput() ? "btn btn-success disabled" : "btn btn-success"}
                   style={{
                     width: "100%",
                     backgroundColor: "#006641",
@@ -175,7 +175,7 @@ function Register() {
                     borderRadius: 10,
                     boxShadow: "0 2px 5px rgba(0,0,0,.5)",
                   }}
-                  onClick={() => checkInput() && submit()}
+                  onClick={() => submit()}
                 >
                   <span style={{ fontWeight: "bolder", letterSpacing: 2 }}>
                     Daftar

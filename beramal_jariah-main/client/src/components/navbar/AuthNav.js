@@ -85,7 +85,7 @@ function AuthNav(props) {
           position: "absolute",
           bottom: 30,
           width: 150,
-          backgroundColor: "#00A441",
+          backgroundColor: "#006641",
           paddingTop: 8,
           paddingBottom: 8,
           color: "#fff",

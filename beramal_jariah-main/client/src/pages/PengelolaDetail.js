@@ -89,27 +89,29 @@ const Header = (props) => {
   return (
     <div
       className="header-wrapper p-3 d-flex justify-content-between align-items-center card-bottom-shadow"
-      style={{ width: "80%" }}
+      style={{ 
+        width: "80%",
+        backgroundColor : "#fff",
+       }}
     >
       <img
         src={props?.photo}
         alt="default image"
-        width="400px"
-        height="200px"
+        width= "20%"
       />
-      <span
+      <h1
         style={{
-          fontFamily: "Pathway Gothic One",
-          color: "#000",
+          fontFamily: "Open Sans",
+          color: "#006641",
           fontWeight: "bolder",
-          fontSize: 46,
+          fontSize: 36,
           letterSpacing: 2,
           width: "80%",
           textAlign: "center",
         }}
       >
         {props?.name}
-      </span>
+      </h1>
     </div>
   );
 };
@@ -136,17 +138,17 @@ const AllPrograms = (props) => {
     <div className="d-flex flex-column" style={{ width: "80%", marginTop: 30 }}>
       <div
         className="w-100 text-center py-2"
-        style={{ backgroundColor: "#00a441" }}
+        style={{ backgroundColor: "#006641", borderRadius: 10 }}
       >
         <span
           style={{
-            fontFamily: "Pathway Gothic One",
+            fontFamily: "Open Sans",
             color: "#fff",
             fontWeight: "bolder",
-            fontSize: 18,
+            fontSize: 20,
           }}
         >
-          Daftar Program yang Tersedia :
+          Daftar Program yang Tersedia
         </span>
       </div>
       <div className="w-100 d-flex justify-content-around mt-3">

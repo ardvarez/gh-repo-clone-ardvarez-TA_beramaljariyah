@@ -44,7 +44,7 @@ function Pengelola() {
                 color: "#006641"
               }}
             >
-              Daftar Yayasan Pengelola
+              Yayasan Pengelola
             </span>
       {dataPengelola.load ? (
         <Loading />

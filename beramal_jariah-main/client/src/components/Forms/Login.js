@@ -53,9 +53,15 @@ function Login() {
 
       setLoad(false);
       navigate.push("/");
-    } catch (error) {}
+    } catch (error) { }
   };
-
+  const requiredInput = () => {
+    if (form.email === "" || form.password === "") {
+      return false
+    } else {
+      return true
+    }
+  };
   return (
     <div
       initial={{ y: "50px", opacity: 0 }}
@@ -75,7 +81,7 @@ function Login() {
             style={{ backgroundColor: "#fff", borderRadius: 15, padding: 40 }}
           >
             <img src={DarkLogoWeb} alt="Dark Logo Web" height="85px" />
-            <span
+            <h1
               style={{
                 fontSize: 40,
                 fontWeight: "bolder",
@@ -83,7 +89,7 @@ function Login() {
               }}
             >
               Selamat Datang
-            </span>
+            </h1>
             <Form className="w-100">
               <Form.Row>
                 <img
@@ -93,6 +99,7 @@ function Login() {
                 />
                 <Form.Control
                   placeholder="Email"
+                  aria-label="email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   required
@@ -106,6 +113,7 @@ function Login() {
                 />
                 <Form.Control
                   type="password"
+                  aria-label="password"
                   placeholder="Kata Sandi"
                   value={form.password}
                   onChange={(e) =>
@@ -118,14 +126,14 @@ function Login() {
                 />
               </Form.Row>
               <Form.Row>
-                <button
+              <button
                   type="button"
                   className={
-                    load ? "btn btn-success disabled" : "btn btn-success"
+                    load || !requiredInput() ? "btn btn-success disabled" : "btn btn-success"
                   }
                   style={{
                     width: "100%",
-                    backgroundColor: "#00A441",
+                    backgroundColor: "#006641",
                     marginTop: 25,
                     paddingTop: 8,
                     paddingBottom: 8,
@@ -146,7 +154,7 @@ function Login() {
               style={{
                 textDecoration: "underline",
                 marginTop: 10,
-                color: "#00A441",
+                color: "#006641",
                 cursor: "pointer",
               }}
             >

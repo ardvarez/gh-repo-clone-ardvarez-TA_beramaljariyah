@@ -20,7 +20,7 @@ function PengelolaCard(props) {
           <Card
             style={{
               width: 315,
-              height: 418,
+              height: 390,
               borderRadius: 10,
               marginBottom: 25,
               marginRight: 10,
@@ -30,12 +30,13 @@ function PengelolaCard(props) {
           >
             <Card.Img
               variant="top"
+              alt= ""
               src={item.photo}
               style={{
                 width: "100%",
-                height: 285,
+                height: "50%",
                 cursor: "pointer",
-                padding: 20,
+                padding: 15,
                 backgroundPosition: "center center",
               }}
               onClick={() => navigation.push(`/pengelola/detail/${item.id}`)}
@@ -43,8 +44,8 @@ function PengelolaCard(props) {
             <Card.Body>
               <Card.Title
                 style={{
-                  fontFamily: "Pathway Gothic One",
-                  fontSize: 24,
+                  fontFamily: "Open Sans",
+                  fontSize: 18,
                   fontWeight: "bolder",
                   color: "#000",
                 }}
