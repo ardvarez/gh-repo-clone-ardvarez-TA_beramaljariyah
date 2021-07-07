@@ -164,10 +164,9 @@ function Landing() {
         </h2>
       <MainProgram />
       </div>
-      {/* {datas.load ? (
+      {datas.load ? (
         <Loading />
-      ) :  */}
-      {/* ( */}
+      ) : (
         <>
           <div
             className="program-card-wrapper card-shadow-bold py-3 px-4"
