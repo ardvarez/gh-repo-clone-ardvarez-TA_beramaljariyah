@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "homepage": "http://beramaljariyah-101.website/",
   "private": true,
   "dependencies": {
     "@develoka/angka-rupiah-js": "^1.0.3",
