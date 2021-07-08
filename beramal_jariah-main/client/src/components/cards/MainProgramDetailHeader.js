@@ -1,9 +1,13 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import toRupiah from "@develoka/angka-rupiah-js";
 import { ProgressBar } from "react-bootstrap";
+import { useLocation } from "react-router";
+
+import Share from "../buttons/Share";
 
 function MainProgramDetailHeader(props) {
   const { danaTerkumpul, targetDana } = props;
+  const urlShare = useLocation()
 
   const persentage = Math.ceil(
     (parseInt(danaTerkumpul) / parseInt(targetDana)) * 100
@@ -19,7 +23,7 @@ function MainProgramDetailHeader(props) {
           height="246px"
         />
       </div>
-      <div className="program-information" style={{ width: "65%" }}>
+      <div className="program-information d-flex flex-column" style={{ width: "65%",position: "relative" }}>
         <div
           className="program-information-title"
           style={{
@@ -94,6 +98,7 @@ function MainProgramDetailHeader(props) {
             </div>
           </div>
         </div>
+        <Share url={urlShare} style={{ position: "absolute", bottom: 0, width: "100%" }} />
       </div>
     </div>
   );

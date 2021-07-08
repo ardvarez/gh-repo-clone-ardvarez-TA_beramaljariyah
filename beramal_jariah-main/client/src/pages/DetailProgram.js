@@ -1,29 +1,20 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { useParams, useLocation, useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import axios from "axios";
 
 import MainProgramDetailHeader from "../components/cards/MainProgramDetailHeader";
-import Penerima from "../components/cards/Penerima";
 import TentangProgram from "../components/cards/TentangProgram";
 import LaporanProgram from "../components/cards/Laporan";
 import DonaturProgram from "../components/cards/Donatur";
-import MainProgramNav from "../components/navbar/MainProgramNav";
 import Footer from "../components/cards/Footer";
-import Share from "../components/buttons/Share";
 import ProgramTransactions from "../components/buttons/ProgramTransactions";
 import Loading from "../components/cards/Loading";
 
 function DetailProgram() {
   const { program, idProgram } = useParams();
-  const path = useLocation();
   const navigate = useHistory();
-
-  const [navHandler, setNavHandler] = useState({
-    tentang: true,
-    laporan: false,
-    donatur: false,
-  });
 
   const [data, setData] = useState({
     program: {},
@@ -170,18 +161,28 @@ function DetailProgram() {
             pengelola={data.pengelola.name}
           />
           {/* <Penerima /> */}
-          <Share url={path.pathname} />
-          <MainProgramNav
-            state={navHandler}
-            onChange={setNavHandler}
-            zakatNav={false}
-          />
-          <SwitchContent
-            selectedContent={navHandler}
-            urlProgram={program}
-            urlIdProgram={idProgram}
-            data={data}
-          />
+          {/* <Share url={path.pathname} /> */}
+          <Tabs style={{ width: "80%" }}>
+            <TabList>
+              <Tab>Tentang</Tab>
+              <Tab>Laporan</Tab>
+              <Tab>Donatur</Tab>
+            </TabList>
+
+            <TabPanel>
+              <TentangProgram tentangProgram={data.program} />
+            </TabPanel>
+            <TabPanel>
+              <LaporanProgram
+                urlProgram={data.program.type}
+                urlIdProgram={data.program.id}
+                data={data.laporan}
+              />
+            </TabPanel>
+            <TabPanel>
+              <DonaturProgram data={data.donatur} />
+            </TabPanel>
+          </Tabs>
         </>
       )}
       <ProgramTransactions
@@ -192,34 +193,5 @@ function DetailProgram() {
     </motion.div>
   );
 }
-
-const SwitchContent = (props) => {
-  const { data } = props;
-
-  console.log(data);
-  if (props.selectedContent.laporan) {
-    return (
-      <AnimatePresence exitBeforeEnter>
-        <LaporanProgram
-          urlProgram={data.program.type}
-          urlIdProgram={data.program.id}
-          data={data.laporan}
-        />
-      </AnimatePresence>
-    );
-  } else if (props.selectedContent.donatur) {
-    return (
-      <AnimatePresence exitBeforeEnter>
-        <DonaturProgram data={data.donatur} />
-      </AnimatePresence>
-    );
-  } else {
-    return (
-      <AnimatePresence exitBeforeEnter>
-        <TentangProgram tentangProgram={data.program} />
-      </AnimatePresence>
-    );
-  }
-};
 
 export default DetailProgram;
