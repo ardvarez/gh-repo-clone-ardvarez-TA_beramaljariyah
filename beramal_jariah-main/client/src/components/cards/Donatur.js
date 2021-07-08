@@ -10,7 +10,7 @@ function Donatur(props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      style={{ width: "80%", margin: "30px 0" }}
+      style={{ width: "100%", margin: "30px 0" }}
     >
       {data.map((item) => {
         return (

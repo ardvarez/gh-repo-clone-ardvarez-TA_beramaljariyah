@@ -2,7 +2,7 @@ import { FacebookShareButton, FacebookIcon, WhatsappShareButton, WhatsappIcon } 
 
 function Share(props) {
     return (
-        <div className="w-80 d-flex my-2">
+        <div className="d-flex my-2" style={{ ...props.style }}>
             <FacebookShareButton
                 url={props.url}
                 style={{ backgroundColor: "#F7F8FB", flexGrow: 1, borderRadius: 20, color: "#212529", fontWeight: 'bolder', border: "1", borderColor: "#3b5998"}}

@@ -19,6 +19,8 @@ function Landing() {
   const [datas, setDatas] = useState({
     programs: [],
     laporans: [],
+    wakaf: [],
+    infak: [],
     totalDana: 0,
     totalProgram: 0,
     load: true,
@@ -53,6 +55,66 @@ function Landing() {
       getProgramTransactions.push(modifiedData);
     }
 
+    //get wakaf program
+    const wakafProgram = await axios
+      .get("http://localhost:5000/programs?type=wakaf&_start=0&_end=3")
+      .then((res) => res.data);
+      console.log("wakaf :", wakafProgram);
+
+    let wakafProgramTransaction = [];
+
+    for (let i = 0; i < wakafProgram.length; i++) {
+      const getTotalTransaction = await axios
+        .get(
+          `http://localhost:5000/programs/${wakafProgram[i].id}/transactionsUser`
+        )
+        .then((result) => result.data);
+      let total = 0;
+
+      for (let x = 0; x < getTotalTransaction.length; x++) {
+        total += getTotalTransaction[x].total;
+      }
+
+      const modifiedData = {
+        ...wakafProgram[i],
+        danaTerkumpul: total,
+        donatur: getTotalTransaction.length,
+      };
+
+      wakafProgramTransaction.push(modifiedData);
+    }
+
+    const infakProgram = await axios
+      .get("http://localhost:5000/programs?type=infak&_start=0&_end=3")
+      .then((res) => res.data); 
+      console.log("infak :",infakProgram);
+
+    let infakProgramTransaction = [];
+
+    for (let i = 0; i < infakProgram.length; i++) {
+      const getTotalTransaction = await axios
+        .get(
+          `http://localhost:5000/programs/${infakProgram[i].id}/transactionsUser`
+        )
+        .then((result) => result.data);
+      let total = 0;
+
+      for (let x = 0; x < getTotalTransaction.length; x++) {
+        total += getTotalTransaction[x].total;
+      }
+
+      const modifiedData = {
+        ...infakProgram[i],
+        danaTerkumpul: total,
+        donatur: getTotalTransaction.length,
+      };
+
+      infakProgramTransaction.push(modifiedData);
+    }
+
+    console.log("wakaf tf :", wakafProgramTransaction);
+    console.log("infak tf :", infakProgramTransaction);
+
     //get laporan data
     const getLaporan = await axios
       .get(
@@ -68,10 +130,10 @@ function Landing() {
         .get(`http://localhost:5000/programs?id=${getLaporan[i].programId}`)
         .then(
           (result) =>
-          (modifiedData = {
-            laporan: getLaporan[i],
-            program: result.data[0],
-          })
+            (modifiedData = {
+              laporan: getLaporan[i],
+              program: result.data[0],
+            })
         );
 
       getLaporanProgram.push(modifiedData);
@@ -119,6 +181,8 @@ function Landing() {
     setDatas({
       programs: getProgramTransactions,
       laporans: laporanProgramTransaction,
+      wakaf: wakafProgramTransaction,
+      infak: infakProgramTransaction,
       totalDana: totalDana,
       totalProgram: allPrograms.length,
       load: false,
@@ -140,29 +204,35 @@ function Landing() {
       <KenclengOnline />
       <div
         className="program-card-wrapper card-shadow-bold py-3 px-4"
-        style={{ width: 1037, borderRadius: 15, marginTop: 50, backgroundColor: "#fff" }}
+        style={{
+          width: 1037,
+          borderRadius: 15,
+          marginTop: 50,
+          backgroundColor: "#fff",
+        }}
       >
         <h1
-        style={{
-          fontFamily: "Open Sans",
-          color: "#006641",
-          fontWeight: "bolder",
-          fontSize: 28,
-        }}
+          style={{
+            fontFamily: "Open Sans",
+            color: "#006641",
+            fontWeight: "bolder",
+            fontSize: 28,
+          }}
         >
-        Program Utama
+          Program Utama
         </h1>
         <h2
-        style={{
-          fontFamily: "Open Sans",
-          color: "#006641",
-          fontWeight: "reguler",
-          fontSize: 18,
-        }}
+          style={{
+            fontFamily: "Open Sans",
+            color: "#006641",
+            fontWeight: "reguler",
+            fontSize: 18,
+          }}
         >
-        Kunjungi Program Utama untuk Berpartisipasi dalam Kegiatan Sosial Kami!
+          Kunjungi Program Utama untuk Berpartisipasi dalam Kegiatan Sosial
+          Kami!
         </h2>
-      <MainProgram />
+        <MainProgram />
       </div>
       {datas.load ? (
         <Loading />
@@ -170,7 +240,12 @@ function Landing() {
         <>
           <div
             className="program-card-wrapper card-shadow-bold py-3 px-4"
-            style={{ width: 1037, borderRadius: 15, marginTop: 50, backgroundColor: "#fff" }}
+            style={{
+              width: 1037,
+              borderRadius: 15,
+              marginTop: 50,
+              backgroundColor: "#fff",
+            }}
           >
             <div className="program-card-title">
               <h1
@@ -181,7 +256,7 @@ function Landing() {
                   fontSize: 28,
                 }}
               >
-                Daftar Program Terbaru
+                Daftar Program Wakaf Terbaru
               </h1>
               <hr
                 style={{
@@ -189,11 +264,10 @@ function Landing() {
                   backgroundColor: "#006641",
                   height: 5,
                 }}
-              >
-              </hr>
+              ></hr>
             </div>
             <div className="w-100 program-card-content d-flex justify-content-between mt-2">
-              {datas.programs.map((item) => {
+              {datas.wakaf.map((item) => {
                 return (
                   <Program
                     withPengelola={false}
@@ -214,7 +288,7 @@ function Landing() {
             >
               <div
                 className="d-flex align-items-center"
-                onClick={() => navigate.push("/all-programs")}
+                onClick={() => navigate.push("/wakaf")}
               >
                 <span
                   style={{
@@ -233,7 +307,79 @@ function Landing() {
           </div>
           <div
             className="program-card-wrapper card-shadow-bold py-3 px-4"
-            style={{ width: 1037, borderRadius: 15, marginTop: 50, backgroundColor: "#fff" }}
+            style={{
+              width: 1037,
+              borderRadius: 15,
+              marginTop: 50,
+              backgroundColor: "#fff",
+            }}
+          >
+            <div className="program-card-title">
+              <h1
+                style={{
+                  fontFamily: "Open Sans",
+                  color: "#006641",
+                  fontWeight: "bolder",
+                  fontSize: 28,
+                }}
+              >
+                Daftar Program Infak Terbaru
+              </h1>
+              <hr
+                style={{
+                  color: "#006641",
+                  backgroundColor: "#006641",
+                  height: 5,
+                }}
+              ></hr>
+            </div>
+            <div className="w-100 program-card-content d-flex justify-content-between mt-2">
+              {datas.infak.map((item) => {
+                return (
+                  <Program
+                    withPengelola={false}
+                    title={item.title}
+                    image={item.image}
+                    donatur={item.donatur}
+                    danaTerkumpul={item.danaTerkumpul}
+                    target={item.target}
+                    style={{ marginBottom: 8, width: "20rem", marginTop: 10 }}
+                    action={() => navigate.push(`/${item.type}/${item.id}`)}
+                  />
+                );
+              })}
+            </div>
+            <div
+              className="program-card-detail w-100 d-flex justify-content-end mt-3"
+              style={{ cursor: "pointer" }}
+            >
+              <div
+                className="d-flex align-items-center"
+                onClick={() => navigate.push("/infak")}
+              >
+                <span
+                  style={{
+                    fontFamily: "Open Sans",
+                    color: "#006641",
+                    fontWeight: "bolder",
+                    fontSize: 18,
+                    marginRight: 8,
+                  }}
+                >
+                  Lihat Selengkapnya
+                </span>
+                <img src={LgDetailIcon} alt="Large Detail Icon" height="14px" />
+              </div>
+            </div>
+          </div>
+          <div
+            className="program-card-wrapper card-shadow-bold py-3 px-4"
+            style={{
+              width: 1037,
+              borderRadius: 15,
+              marginTop: 50,
+              backgroundColor: "#fff",
+            }}
           >
             <div className="program-card-title">
               <h1
@@ -252,8 +398,7 @@ function Landing() {
                   backgroundColor: "#006641",
                   height: 5,
                 }}
-              >
-              </hr>
+              ></hr>
             </div>
             <div className="w-100 program-card-content d-flex justify-content-between mt-2">
               {datas.laporans.map((item) => {

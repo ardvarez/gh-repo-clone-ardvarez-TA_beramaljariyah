@@ -1,10 +1,9 @@
 import { Card } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
-import DefaultImage from "../../assets/default-img.png";
-
 function PengelolaCard(props) {
   const navigation = useHistory();
+  console.log(props.dataPengelola);
 
   return (
     <div
@@ -30,7 +29,7 @@ function PengelolaCard(props) {
           >
             <Card.Img
               variant="top"
-              alt= ""
+              alt=""
               src={item.photo}
               style={{
                 width: "100%",
@@ -41,17 +40,29 @@ function PengelolaCard(props) {
               }}
               onClick={() => navigation.push(`/pengelola/detail/${item.id}`)}
             />
-            <Card.Body>
-              <Card.Title
-                style={{
-                  fontFamily: "Open Sans",
-                  fontSize: 18,
-                  fontWeight: "bolder",
-                  color: "#000",
-                }}
-              >
-                {item.name}
-              </Card.Title>
+            <Card.Body className="d-flex flex-column justify-content-between">
+              <div>
+                <Card.Title
+                  style={{
+                    fontFamily: "Open Sans",
+                    fontSize: 18,
+                    fontWeight: "bolder",
+                    color: "#000",
+                  }}
+                >
+                  {item.name}
+                </Card.Title>
+                <Card.Title
+                  style={{
+                    fontFamily: "Open Sans",
+                    fontSize: 14,
+                    fontWeight: "bolder",
+                    color: "#000",
+                  }}
+                >
+                  Total Program : { item.totalProgram }
+                </Card.Title>
+              </div>
               <Card.Text>
                 <button
                   type="button"

@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-tabs/style/react-tabs.css';
 import "./index.css";
 import App from "./App";
 
