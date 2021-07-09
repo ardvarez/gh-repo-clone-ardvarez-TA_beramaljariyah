@@ -37,8 +37,8 @@ function Laporan(props) {
                     <div className="d-flex justify-content-between">
                       <span className="report-card-title">{laporan.title}</span>
                       <span
-                        className="report-card-detail text-secondary"
-                        style={{ cursor: "pointer" }}
+                        className="report-card-detail"
+                        style={{cursor: "pointer"}}
                         onClick={() =>
                           navigation.push(
                             `/${props.urlProgram}/${props.urlIdProgram}/laporan-detail/${laporan.id}`

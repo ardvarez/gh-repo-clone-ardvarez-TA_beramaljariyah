@@ -33,7 +33,7 @@ function Footer() {
             style={{ width: "20%" }}
           >
             <span style={{ fontWeight: "bolder" }}>Kontak</span>
-            <span style={{ fontSize: 14 }}>
+            <span style={{ fontSize: 16 }}>
               Jl. Sampurna No. 9 Kota Bandung <br />
               Telp / WA: <br />
               0819-95-10-1000
@@ -49,7 +49,7 @@ function Footer() {
             >
               Tentang Kami
             </span>
-            <span style={{ fontSize: 14, textAlign: "justify" }}>
+            <span style={{ fontSize: 16, textAlign: "justify" }}>
               Yayasan Sahabat Beramal Jariyah dengan akta pendirian No. 79
               Tanggal 31-01-2020, adalah lembaga penggalangan dana online dengan
               situs beramaljariyah.org yang menggalang program Zakat, Infaq, dan
