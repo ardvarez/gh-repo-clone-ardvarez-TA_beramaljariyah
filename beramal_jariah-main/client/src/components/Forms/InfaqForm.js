@@ -57,7 +57,7 @@ function InfaqForm(props) {
 
     setForm({
       ...form,
-      idPayment: e.value,
+      paymentId: e.value,
       paymentCost,
       paymentMethod: selectedPayment[0],
     });
