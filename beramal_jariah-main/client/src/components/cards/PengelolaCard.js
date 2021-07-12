@@ -18,10 +18,10 @@ function PengelolaCard(props) {
         return (
           <Card
             style={{
-              width: 315,
-              height: 390,
+              width: 310,
+              height: 330,
               borderRadius: 10,
-              marginBottom: 25,
+              marginBottom: 24,
               marginRight: 10,
               marginLeft: 10,
             }}
