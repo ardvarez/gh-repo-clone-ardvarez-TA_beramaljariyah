@@ -115,7 +115,7 @@ function Login() {
                   fontWeight: "bolder",
                   fontSize: 16
                 }}>
-                  Password
+                  Kata Sandi
                 </label>
               <Form.Row>
                 {/* <img
