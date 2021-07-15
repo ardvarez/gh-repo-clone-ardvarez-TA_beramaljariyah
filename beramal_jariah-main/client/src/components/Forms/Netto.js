@@ -144,6 +144,9 @@ function Netto() {
       borderRadius: 10,
       height: 38,
     }),
+    placeholder: (styles) => ({
+      color: "#545454"
+    }),
   };
 
   return (
