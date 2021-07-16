@@ -158,7 +158,7 @@ function Profile() {
                   Saya mau menerima kabar baik lewat WhatsApp
                 </span>
               </div>
-              <Switch
+              <Switch aria-label='switch'
                 checked={toggle}
                 onChange={() => {
                   setToggle(!toggle);

@@ -40,7 +40,7 @@ function EditCard(props) {
           <Form.Label>
             <span style={{ fontWeight: "bolder", fontSize: 24 }}>Email</span>
           </Form.Label>
-          <Form.Control
+          <Form.Control aria-label='email'
             name="username"
             value={profile.email}
             onChange={(e) =>
@@ -55,7 +55,7 @@ function EditCard(props) {
           <Form.Label>
             <span style={{ fontWeight: "bolder", fontSize: 24 }}>Username</span>
           </Form.Label>
-          <Form.Control
+          <Form.Control aria-label='username'
             name="username"
             value={profile.username}
             onChange={(e) =>
@@ -70,7 +70,7 @@ function EditCard(props) {
           <Form.Label>
             <span style={{ fontWeight: "bolder", fontSize: 24 }}>No. HP</span>
           </Form.Label>
-          <Form.Control
+          <Form.Control aria-label='phone'
             name="username"
             value={profile.phone}
             onChange={(e) =>
@@ -87,7 +87,7 @@ function EditCard(props) {
               Bio Singkat
             </span>
           </Form.Label>
-          <Form.Control
+          <Form.Control aria-label='bio'
             as="textarea"
             placeholder="Tulis Tentang Diri Anda"
             style={{ height: 80 }}
