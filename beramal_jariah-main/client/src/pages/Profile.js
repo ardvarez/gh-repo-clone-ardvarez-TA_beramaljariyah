@@ -62,6 +62,7 @@ function Profile() {
 
   useEffect(() => {
     getData();
+    document.title = `Profile | beramaljariyah`
   }, []);
 
   const logout = () => {

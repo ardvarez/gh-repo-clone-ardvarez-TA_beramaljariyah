@@ -138,6 +138,7 @@ function DetailProgram() {
 
   useEffect(() => {
     getData();
+    document.title = `Detail Program ${program.substr(0,1).toUpperCase() + program.substr(1,4)} | beramaljariyah`
   }, []);
 
   return (

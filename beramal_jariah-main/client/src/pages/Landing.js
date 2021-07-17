@@ -190,6 +190,7 @@ function Landing() {
   };
   useEffect(() => {
     getDataPrograms();
+    document.title = "Beranda | beramaljariyah"
   }, []);
 
   return (

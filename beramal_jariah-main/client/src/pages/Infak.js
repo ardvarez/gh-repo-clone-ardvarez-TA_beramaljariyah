@@ -72,6 +72,7 @@ function Infak() {
 
   useEffect(() => {
     getData();
+    document.title = "Program Infak | beramaljariyah"
   }, []);
 
   const navigateTo = (program, idProgram) => {

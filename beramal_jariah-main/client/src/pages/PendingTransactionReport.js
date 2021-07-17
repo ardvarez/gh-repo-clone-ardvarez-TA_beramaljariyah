@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import { TransactionContext } from "../contexts/transactionContext";
 
@@ -11,6 +11,10 @@ import Footer from "../components/cards/Footer";
 function PendingTransactionReport() {
   const [transaction] = useContext(TransactionContext);
   const data = transaction.transaction;
+
+  useEffect(() => {
+    document.title = `Transaksi Tertunda | beramaljariyah`
+  }, [])
 
   return (
     <motion.div

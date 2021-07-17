@@ -27,7 +27,9 @@ function TransactionSuccess() {
 
   useEffect(() => {
     getData();
+    document.title = `Transaksi Berhasil | beramaljariyah`
   }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

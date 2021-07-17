@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import TentangCard from "../components/cards/TentangContent";
 import SyaratKetentuan from "../components/cards/SyaratKetentuan";
@@ -11,6 +11,10 @@ function Tentang() {
     tentang: true,
     syaratKetentuan: false,
   });
+
+  useEffect(() => {
+    document.title = "Tentang | beramaljariyah"
+  }, [])
 
   const switchContent = (state) => {
     if (state.syaratKetentuan) {

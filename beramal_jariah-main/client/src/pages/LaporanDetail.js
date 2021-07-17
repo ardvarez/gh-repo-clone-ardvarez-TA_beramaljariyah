@@ -12,7 +12,7 @@ import Footer from "../components/cards/Footer";
 import Loading from "../components/cards/Loading";
 
 function LaporanDetail() {
-  const { idProgram, idLaporan } = useParams();
+  const { program, idProgram, idLaporan } = useParams();
   const [data, setData] = useState({
     laporan: {},
     program: {},
@@ -69,6 +69,7 @@ function LaporanDetail() {
 
   useEffect(() => {
     getData();
+    document.title = `Detail Laporan Program ${program.substr(0,1).toUpperCase() + program.substr(1,4)} | beramaljariyah`
   }, []);
 
   return (

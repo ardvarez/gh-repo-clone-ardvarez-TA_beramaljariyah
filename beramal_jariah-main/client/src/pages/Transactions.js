@@ -30,6 +30,7 @@ function Transactions() {
 
   useEffect(() => {
     getData();
+    document.title = `Formulir ${program.substr(0,1).toUpperCase() + program.substr(1,4)} | beramaljariyah`
   }, []);
 
   return (

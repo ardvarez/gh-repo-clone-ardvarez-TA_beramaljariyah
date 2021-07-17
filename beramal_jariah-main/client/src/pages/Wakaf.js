@@ -71,6 +71,7 @@ function Wakaf() {
 
   useEffect(() => {
     getData();
+    document.title = "Program Wakaf | beramaljariyah"
   }, []);
 
   const navigateTo = (program, idProgram) => {

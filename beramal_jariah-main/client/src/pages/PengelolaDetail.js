@@ -58,6 +58,7 @@ function PengelolaDetail() {
 
   useEffect(() => {
     getDataPengelola();
+    document.title = "Tentang Pengelola | beramaljariyah"
   }, []);
 
   return (

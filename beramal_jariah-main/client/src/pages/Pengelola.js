@@ -38,6 +38,7 @@ function Pengelola() {
 
   useEffect(() => {
     getDataPengelola();
+    document.title = "Pengelola | beramaljariyah"
   }, []);
 
   return (

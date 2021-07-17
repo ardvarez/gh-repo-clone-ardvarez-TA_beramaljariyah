@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import MainProgramNav from "../components/navbar/MainProgramNav";
@@ -13,7 +13,11 @@ function Zakat() {
     penghasilan: true,
     maal: false,
   });
-<title> Halaman Zakat</title>
+
+  useEffect(() => {
+    document.title="Zakat | beramaljariyah"
+  }, [])
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

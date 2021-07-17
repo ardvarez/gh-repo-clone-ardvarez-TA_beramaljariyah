@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router";
 
@@ -18,6 +18,10 @@ function Search() {
   const navigateTo = (program, idProgram) => {
     return navigation.push(`/${program}/${idProgram}`);
   };
+
+  useEffect(() => {
+    document.title = `Pencarian | beramaljariyah`
+  }, [])
 
   return (
     <motion.div

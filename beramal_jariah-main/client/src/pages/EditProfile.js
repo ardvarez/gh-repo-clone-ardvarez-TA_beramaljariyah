@@ -30,6 +30,7 @@ function EditProfile() {
 
   useEffect(() => {
     getData();
+    document.title = `Ubah Profile | beramaljariyah`
   }, []);
 
   return (

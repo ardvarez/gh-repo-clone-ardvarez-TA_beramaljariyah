@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import AuthNav from "../components/navbar/AuthNav";
 import LoginForm from "../components/Forms/Login";
@@ -10,6 +10,14 @@ function Auth() {
     login: true,
     register: false,
   });
+
+  useEffect(() => {
+    if (content.login) {
+      document.title = "Login | beramaljariyah"
+    } else {
+      document.title = "Register | beramaljariyah"
+    }
+  }, [content])
 
   const changeContent = () => {
     if (content.register) {

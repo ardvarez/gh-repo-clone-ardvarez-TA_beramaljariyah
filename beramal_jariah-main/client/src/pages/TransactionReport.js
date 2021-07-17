@@ -28,6 +28,7 @@ function TransactionReport() {
 
   useEffect(() => {
     checkAuth();
+    document.title = `Detail Transaksi | beramaljariyah`
   }, []);
 
   if (transaction.transaction == null) {

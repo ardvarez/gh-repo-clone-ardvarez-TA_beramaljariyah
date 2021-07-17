@@ -43,7 +43,9 @@ function TransactionSuccessReport() {
 
   useEffect(() => {
     getData();
+    document.title = `Detail Traksaksi Berhasil | beramaljariyah`
   }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
